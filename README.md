@@ -24,9 +24,9 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 4. Crear archivo .env:
-DATABASE_URL=tu_url_de_postgresql
-ACCESS_KEY=tu_access_key
-ENCRYPT_KEY=tu_clave_fernet
+DATABASE_URL=postgresql://juanpablosalud_db_user:lFvQNoPZdsvyrK5ATqOv38oupquKjtcA@dpg-d6j1n6h5pdvs73aebes0-a.oregon-postgres.render.com/juanpablosalud_db
+ACCESS_KEY=GLOBAL123
+ENCRYPT_KEY=fNzItSYFiviHjk3TG9G9l_Hu8W3PVEQdf9U4TK34Xys=
 
 5. Levantar el servidor:
 uvicorn app.main:app --reload
@@ -40,6 +40,12 @@ uvicorn app.main:app --reload
 
 ## Seguridad
 Todos los endpoints requieren doble API Key en los headers:
-- X-Access-Key: llave global del sistema
-- X-Permission-Key: llave del usuario con su rol
+- X-Access-Key: llave global del sistema (GLOBAL123)
+- X-Permission-Key: llave del usuario con su rol (Para entrar como médico: Permission Key: a4add66322f6ed5f8be545fce465bff8bde7ff80d8c00189, Para entrar como paciente: Permission Key: 7304affb3136ef012ff34f6a0a0bae0f97ab0c2a21b2b31d, Para entrar como admin: Permission Key: ADMIN123)
+
+
+
+
+
+
 
