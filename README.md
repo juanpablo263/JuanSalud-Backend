@@ -24,9 +24,9 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 4. Crear archivo .env:
-DATABASE_URL=postgresql://juanpablosalud_db_user:lFvQNoPZdsvyrK5ATqOv38oupquKjtcA@dpg-d6j1n6h5pdvs73aebes0-a.oregon-postgres.render.com/juanpablosalud_db
-ACCESS_KEY=GLOBAL123
-ENCRYPT_KEY=fNzItSYFiviHjk3TG9G9l_Hu8W3PVEQdf9U4TK34Xys=
+DATABASE_URL=postgresql://usuario:contraseña@host/nombre_db
+ACCESS_KEY=TU_ACCESS_KEY_AQUI
+ENCRYPT_KEY=TU_CLAVE_FERNET_AQUI
 
 5. Levantar el servidor:
 uvicorn app.main:app --reload
