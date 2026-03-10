@@ -40,11 +40,17 @@ uvicorn app.main:app --reload
 
 ## Seguridad
 Todos los endpoints requieren doble API Key en los headers:
-- X-Access-Key: llave global del sistema (GLOBAL123)
-- X-Permission-Key: llave del usuario con su rol (Para entrar como médico: Permission Key: a4add66322f6ed5f8be545fce465bff8bde7ff80d8c00189, Para entrar como paciente: Permission Key: 7304affb3136ef012ff34f6a0a0bae0f97ab0c2a21b2b31d, Para entrar como admin: Permission Key: ADMIN123)
+- **X-Access-Key**: llave global del sistema
+- **X-Permission-Key**: llave del usuario con su rol
 
+| Rol | Permisos |
+|-----|---------|
+| Admin | CRUD completo + gestión de usuarios |
+| Médico | Crear y editar pacientes y observaciones |
+| Paciente | Solo lectura |
 
-
+> Las API Keys se configuran en las variables de entorno del servidor
+> y se asignan a cada usuario al momento de su creación en la base de datos.
 
 
 
